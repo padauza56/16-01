@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title if title else "Flask Nav" }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="/" class="{% if active == 'home'  %} active {% endif %}">Home</a>
+            <a href="/about" class="{% if active == 'about'  %} active {% endif %}">About</a>
+            <a href="/history" class="{% if active == 'contact'  %} active {% endif %}">History</a>
+            <a href="/gameplay" class="{% if active == 'services'  %} active {% endif %}">Gameplay</a>
+            <a href="/tips" class="{% if active == 'tips'  %} active {% endif %}">Tips</a>
+            <p></p>
+        </nav>
+    </header>
+    
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p class="fot">Made by Ignas</p>
+        <p class="fot">Code Academy kids project</p>
+    </footer>
+
+</body>
+</html>

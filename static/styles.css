@@ -1,0 +1,101 @@
+body {
+    font-family: system-ui;
+    margin: 0;
+    min-height: 150vh;
+    width: 100%;
+    background: linear-gradient(
+    to bottom,
+    #40f1e5 0%,     /* mėlyna */
+    #40f1e5 15%,
+
+    #289b41 15%,   /* žalia */
+    #289b41 16%,
+
+    #4c2602 16%,   /* žalia */
+    #4c2602 20%,
+
+    #8a8a8a 20%,   /* pilka */
+    #8a8a8a 40%,
+
+    #363636 40%,   /* pilka */
+    #363636 65%,
+
+    #141414 65%,   /* pilka */
+    #141414 66%,
+
+    #760000 66%,
+    #760000 80%,
+
+    #141414 80%,   /* pilka */
+    #141414 81%,
+
+    #010010 81%,
+    #010010 100%
+
+  );
+}
+
+
+nav{
+    text-align: center;
+    padding: 15px 15px;
+    background-color: #2594d9;
+}
+
+nav a{
+    margin: 0 12px;
+    padding: 6px 0;
+    text-decoration: none;
+    color: #636363;
+    
+}
+
+nav a:hover{
+    color: #000000;
+}
+
+nav a.active {
+    color: #000000;
+    border-bottom: 2px solid #000;
+}
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 10px;
+}
+
+h1.mc{
+    font-size: 80px;
+    text-align: center;
+    color: #787878;
+    text-shadow: 2px 10px 4px rgba(0, 0, 0, 0.575);
+}
+
+h1 {
+    font-size: 80px;
+    text-align: center;
+    transform-origin: center;
+    transform: translate(0px, -20px);
+}
+
+p {
+    text-align:center;
+    font-size: 42px;
+    max-width: 100%;
+    color: #afafaf;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.fot {
+    font-size: 15px;
+    background-color: #9393935b;
+}
+
+footer {
+    padding-top: 100%;
+}
