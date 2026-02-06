@@ -3,43 +3,38 @@ body {
     margin: 0;
     min-height: 150vh;
     width: 100%;
-    background: linear-gradient(
-    to bottom,
-    #40f1e5 0%,     /* mėlyna */
-    #40f1e5 15%,
-
-    #289b41 15%,   /* žalia */
-    #289b41 16%,
-
-    #4c2602 16%,   /* žalia */
-    #4c2602 20%,
-
-    #8a8a8a 20%,   /* pilka */
-    #8a8a8a 40%,
-
-    #363636 40%,   /* pilka */
-    #363636 65%,
-
-    #141414 65%,   /* pilka */
-    #141414 66%,
-
-    #760000 66%,
-    #760000 80%,
-
-    #141414 80%,   /* pilka */
-    #141414 81%,
-
-    #010010 81%,
-    #010010 100%
-
-  );
+    background-image: 
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            transparent 15%,
+            #289b41 15%,
+            #289b41 16%,
+            #4c2602 16%,
+            #4c2602 20%,
+            #8a8a8a 20%,
+            #8a8a8a 40%,
+            #363636 40%,
+            #363636 65%,
+            #141414 65%,
+            #141414 66%,
+            #760000 66%,
+            #760000 80%,
+            #141414 80%,
+            #141414 81%,
+            #010010 81%,
+            #010010 100%
+        ),
+        url('/Content/bg.png');
+    background-size: 100% 100%, 100% 15%;
+    background-repeat: no-repeat;
+    background-position: 0 0, top center;
 }
 
-
-nav{
+nav {
     text-align: center;
     padding: 15px 15px;
-    background-color: #2594d9;
+    background-color: transparent;
 }
 
 nav a{

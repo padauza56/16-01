@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 
 app = Flask(__name__)
 
@@ -17,6 +17,10 @@ def contact():
 @app.route("/about")
 def about():
     return render_template("about.html", active="about")
+
+@app.route('/Content/<path:filename>')
+def content_files(filename):
+    return send_from_directory('Content', filename)
 
 @app.route("/tips")
 def tips():
