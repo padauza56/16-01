@@ -1,10 +1,20 @@
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template, send_from_directory, session, redirect, url_for
 
 app = Flask(__name__)
+app.secret_key = 'your-secret-key'
 
 @app.route("/")
 def index():
-    return render_template("index.html", active="home")
+    if session.pop('secret_clicked', False):
+        return render_template("Sercet.html")
+    else:
+        return render_template("index.html", active="home")
+
+@app.route("/secret")
+def secret():
+    session['secret_clicked'] = True
+    return redirect(url_for('index'))
+
 
 @app.route("/gameplay")
 def services():

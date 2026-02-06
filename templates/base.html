@@ -29,5 +29,23 @@
         <p class="fot">Code Academy kids project</p>
     </footer>
 
+    <div id="secretClickZone"></div>
+
+    <script>
+        // Create clickable area for the dark line (#141414 65-66%)
+        const secretZone = document.getElementById('secretClickZone');
+        secretZone.style.position = 'fixed';
+        secretZone.style.top = '65%';
+        secretZone.style.left = '0';
+        secretZone.style.width = '100%';
+        secretZone.style.height = '1%';
+        secretZone.style.cursor = 'pointer';
+        secretZone.style.zIndex = '1';
+
+        secretZone.addEventListener('click', function() {
+            window.location.href = '/secret';
+        });
+    </script>
+
 </body>
 </html>
