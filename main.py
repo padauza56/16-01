@@ -5,7 +5,7 @@ app.secret_key = 'your-secret-key'
 
 @app.route("/")
 def index():
-    if session.pop('secret_clicked', False):
+    if session.pop('secret_clicked', True):
         return render_template("Sercet.html")
     else:
         return render_template("index.html", active="home")

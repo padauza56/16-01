@@ -31,6 +31,39 @@ body {
     background-position: 0 0, top center;
 }
 
+body.secret {
+    font-family: system-ui;
+    margin: 0;
+    min-height: 150vh;
+    width: 100%;
+    background-image: 
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            transparent 15%,
+            #104a1b 15%,
+            #104a1b 16%,
+            #4c2602 16%,
+            #4c2602 20%,
+            #656565 20%,
+            #656565 40%,
+            #363636 40%,
+            #363636 65%,
+            #141414 65%,
+            #141414 66%,
+            #760000 66%,
+            #760000 80%,
+            #141414 80%,
+            #141414 81%,
+            #010010 81%,
+            #010010 100%
+        ),
+        url('/Content/nightBg.png');
+    background-size: 100% 100%, 100% 15%;
+    background-repeat: no-repeat;
+    background-position: 0 0, top center;
+}
+
 nav {
     text-align: center;
     padding: 15px 15px;
@@ -52,6 +85,23 @@ nav a:hover{
 nav a.active {
     color: #000000;
     border-bottom: 2px solid #000;
+    animation: 1s linear 0s 1 normal transform;
+}
+nav a {
+    display: inline-block;
+    width: 100px;
+}
+@keyframes transform {
+    from {
+        border-bottom: 2px solid #000;
+        transform: scaleX(0);
+        transform-origin: center;
+    }
+    to {
+        border-bottom: 2px solid #000;
+        transform: scaleX(1);
+        transform-origin: center;
+    }
 }
 
 main {
@@ -65,6 +115,36 @@ h1.mc{
     text-align: center;
     color: #787878;
     text-shadow: 2px 10px 4px rgba(0, 0, 0, 0.575);
+}
+
+div.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #5f1783;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+p.sec {
+    transform: translateY(900px);
+}
+
+h1.secret{
+    font-size: 80px;
+    text-align: center;
+    color: #000000;
+    text-shadow: 2px 10px 4px rgb(255, 255, 255);
 }
 
 h1 {
