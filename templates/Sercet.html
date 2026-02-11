@@ -1,31 +1,30 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <body class ="secret">
-        <h1 class = "secret"> Secret? </h1>
+    <body class="secret">
+        <h1 class="secret"> Secret? </h1>
         <p> What now? </p>
-
         <p class="sec">There must be something to be spelled out</p>
-
         <div class="container" id="popup" style="display: none;">
-            <button>Download the Game?</button>
-        </div>
-        
+            <a href="/download" download="minecraft_game.exe">
+                <button>Download the Game?</button>
+           </a>
+       </div>
+    
         <script>
             document.addEventListener('keydown', function(event) {
-            if (!window.keySequence) window.keySequence = '';
-            window.keySequence += event.key.toLowerCase();
-            
-            if (window.keySequence.includes('minecraft')) {
-                console.log('Minecraft spelled!');
-                document.getElementById('popup').style.display = 'block';
-                window.keySequence = '';
-            }
-            if (window.keySequence.length > 10) {
-                window.keySequence = window.keySequence.slice(-10);
-            }
+                if (!window.keySequence) window.keySequence = '';
+                window.keySequence += event.key.toLowerCase();
+                
+                if (window.keySequence.includes('minecraft')) {
+                    console.log('Minecraft spelled!');
+                    document.getElementById('popup').style.display = 'block';
+                    window.keySequence = '';
+                }
+                if (window.keySequence.length > 10) {
+                    window.keySequence = window.keySequence.slice(-10);
+                }
             });
         </script>
-
     </body>
 {% endblock %}
