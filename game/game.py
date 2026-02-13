@@ -168,8 +168,6 @@ def map(
     slope_direction='none',
     noise_scale=0.5,
     double_layer_chance=0.025,
-    stone_depth = 7, 
-    ore_chance=0.2
 ):
 
     if seed is not None:
