@@ -5,7 +5,7 @@ import random
 
 GAME_RESOLUSION = (1024,1024)
 
-PLAYER_X = 0  # Start at world origin
+PLAYER_X = 0
 PLAYER_Y = 300
 
 PLAYER_SPEED = 5
@@ -18,10 +18,9 @@ JUMP_STRENGTH = -13
 
 BLOCKSIZE = 64
 
-FLOOR = 1000  # Fixed floor position in world coordinates
+FLOOR = 1000 
 
-# Camera settings
-CAMERA_VERTICAL_THRESHOLD = 200  # How far from center before camera moves
+CAMERA_VERTICAL_THRESHOLD = 200
 
 pygame.init()
 window = pygame.display.set_mode(GAME_RESOLUSION)
